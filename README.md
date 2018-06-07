@@ -16,5 +16,6 @@ npm run build
      如果其中一个文件被更新，代码将被重新编译，所以你不必手动运行整个构建。但是需要刷新浏览器。
    * webpack-dev-server: 在 localhost:8080 下建立服务，将 dist 目录下的文件，作为可访问文件。npm start 自动编译。
    * webpack-dev-middleware: 和express进行搭配搭建简单服务器
+   * webpack-merge: 通用配置，然后分别引入到开发和生产环境
 ```
 
