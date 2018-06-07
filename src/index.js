@@ -1,14 +1,17 @@
-import {cube} from './math.js';
-if (process.env.NODE_ENV!=='production'){
-    console.log('Looks like we are in development mode!')
-}
-console.log('当前环境：', process.env.NODE_ENV);
-function component () {
-    var element = document.createElement('pre');
-    element.innerHTML = [
-        'hello webpack',
-        '5 cubed is equal to'+ cube(5)
-    ].join('\n\n');
+function component() {
+    var element = document.createElement('div');
+    var button = document.createElement('button');
+    var br = document.createElement('br');
+
+    button.innerHTML = '点击查看控制台a';
+    element.innerHTML = join(['HHello', 'webpack'], ' ');
+    element.appendChild(br);
+    element.appendChild(button);
+
+    button.onclick = e => import(/* webpackChunkName:"print"*/'./print').then(module => {
+        var print = module.default;
+        print();
+    })
     return element;
 }
 document.body.appendChild(component());

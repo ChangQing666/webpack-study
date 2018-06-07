@@ -9,12 +9,13 @@
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "changqing",
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "csv-loader": "^2.1.1",
+    "exports-loader": "^0.7.0",
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
@@ -27,6 +28,8 @@
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.10",
+    "whatwg-fetch": "^2.0.4"
   }
 }
